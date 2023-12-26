@@ -7,8 +7,8 @@ export type ButtonProps = Prettify<
   TwcComponentProps<'button'> & ButtonVariants
 >;
 
-export const Button = twx.button<ButtonProps>(({ variant, size }) =>
-  buttonVariants({ variant, size })
+export const Button = twx.button<ButtonProps>(({ $variant, $size }) =>
+  buttonVariants({ $variant, $size })
 );
 
 Button.displayName = 'Button';

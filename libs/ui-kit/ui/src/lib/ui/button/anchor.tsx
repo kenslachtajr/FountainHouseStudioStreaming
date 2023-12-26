@@ -16,6 +16,6 @@ function handleAttrs({ external }: AnchorProps) {
   return external ? { target: '_blank', rel: 'noopener noreferrer' } : {};
 }
 
-function handleStyling({ variant, size }: AnchorProps) {
-  return buttonVariants({ variant, size });
+function handleStyling({ $variant, $size }: AnchorProps) {
+  return buttonVariants({ $variant, $size });
 }
