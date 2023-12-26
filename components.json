@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "default",
+  "rsc": false,
+  "tsx": true,
+  "tailwind": {
+    "config": "apps/music-player/tailwind.config.js",
+    "css": "apps/music-player/pages/styles.css",
+    "baseColor": "stone",
+    "cssVariables": true
+  },
+  "aliases": {
+    "components": "@workspace/ui-kit/lib",
+    "utils": "@workspace/ui-kit/util"
+  }
+}
