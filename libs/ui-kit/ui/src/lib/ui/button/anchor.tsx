@@ -1,13 +1,14 @@
 import { Prettify, twx } from '@workspace/ui-kit/util';
+import Link from 'next/link';
 import { TwcComponentProps } from 'react-twc';
 
 import { ButtonVariants, buttonVariants } from './variants';
 
 export type AnchorProps = Prettify<
-  TwcComponentProps<'a'> & ButtonVariants & { external: boolean }
+  TwcComponentProps<typeof Link> & ButtonVariants & { external?: boolean }
 >;
 
-export const Anchor = twx.a.attrs<AnchorProps>(handleAttrs)(handleStyling);
+export const Anchor = twx(Link).attrs<AnchorProps>(handleAttrs)(handleStyling);
 
 Anchor.displayName = 'Anchor';
 
