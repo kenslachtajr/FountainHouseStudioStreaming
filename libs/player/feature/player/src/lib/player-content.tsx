@@ -1,39 +1,55 @@
 import {
   Button,
-  DrawerClose,
   DrawerContent,
   DrawerDescription,
   DrawerFooter,
   DrawerHeader,
   DrawerTitle,
+  ImageWithFallback,
+  LucideIcon,
+  Slider,
 } from '@workspace/ui-kit/ui';
 
 export const PlayerContent = () => {
   return (
     <DrawerContent>
-      <div className="w-full max-w-sm mx-auto">
-        <DrawerHeader>
-          <DrawerTitle>Move Goal</DrawerTitle>
-          <DrawerDescription>Set your daily activity goal.</DrawerDescription>
-        </DrawerHeader>
-        <div className="p-4 pb-0">
-          <div className="flex items-center justify-center space-x-2">
-            <div className="flex-1 text-center">
-              <div className="font-bold tracking-tighter text-7xl">
-                {/* {goal} */}
-              </div>
-              <div className="text-[0.70rem] uppercase text-muted-foreground">
-                Calories/day
-              </div>
-            </div>
+      <div className="w-full max-w-sm mx-auto mt-5 space-y-7">
+        <DrawerHeader className="space-y-3">
+          <div className="min-h-[13rem]">
+            <ImageWithFallback
+              priority
+              alt="Album Cover"
+              className="object-cover w-full h-full rounded"
+              src="https://picsum.photos/2000/2000?random=1"
+            />
           </div>
-          <div className="mt-3 h-[120px]"></div>
-        </div>
-        <DrawerFooter>
-          <Button>Submit</Button>
-          <DrawerClose asChild>
-            <Button $variant="outline">Cancel</Button>
-          </DrawerClose>
+          <div>
+            <DrawerDescription>Hymns And Classics</DrawerDescription>
+            <DrawerTitle className="leading-loose">
+              Victory In Jesus
+            </DrawerTitle>
+            <DrawerDescription>Literal Life Church</DrawerDescription>
+          </div>
+        </DrawerHeader>
+        <DrawerFooter className="space-y-5">
+          <Slider defaultValue={[50]} max={100} step={1} />
+          <div className="flex items-center justify-between">
+            <Button $size="icon" $variant="ghost">
+              <LucideIcon iconName="Shuffle" size={20} />
+            </Button>
+            <Button $size="icon" $variant="ghost">
+              <LucideIcon iconName="SkipBack" size={25} />
+            </Button>
+            <Button $size="icon" $variant="ghost">
+              <LucideIcon iconName="Play" size={30} />
+            </Button>
+            <Button $size="icon" $variant="ghost">
+              <LucideIcon iconName="SkipForward" size={25} />
+            </Button>
+            <Button $size="icon" $variant="ghost">
+              <LucideIcon iconName="Repeat" size={20} />
+            </Button>
+          </div>
         </DrawerFooter>
       </div>
     </DrawerContent>

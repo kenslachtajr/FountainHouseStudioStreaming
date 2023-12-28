@@ -10,12 +10,12 @@ export const PlayerPreview = () => {
           priority
           alt="Album Cover"
           className="object-cover w-20 h-20"
-          src="https://picsum.photos/400/400"
+          src="https://picsum.photos/400/400?random=1"
         />
         <div>
-          <p className="text-xs text-muted-foreground">Song Album</p>
-          <p>Song Title</p>
-          <p className="text-sm text-muted-foreground">Song Artist</p>
+          <p className="text-xs text-muted-foreground">Hymns And Classics</p>
+          <p>Victory In Jesus</p>
+          <p className="text-sm text-muted-foreground">Literal Life Church</p>
         </div>
       </DrawerTrigger>
       <PlayerContent />

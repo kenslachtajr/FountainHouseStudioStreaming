@@ -2,10 +2,7 @@ import { Button, LucideIcon, Progress } from '@workspace/ui-kit/ui';
 
 import { PlayerPreview } from './player-preview';
 
-/* eslint-disable-next-line */
-export interface PlayerFeatureProps {}
-
-export function PlayerFeature(props: PlayerFeatureProps) {
+export const PlayerFeature = () => {
   return (
     <div className="fixed bottom-0 w-full shadow">
       <Progress value={75} />
@@ -19,4 +16,4 @@ export function PlayerFeature(props: PlayerFeatureProps) {
       </div>
     </div>
   );
-}
+};
