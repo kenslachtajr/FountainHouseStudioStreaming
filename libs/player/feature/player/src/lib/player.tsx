@@ -4,7 +4,7 @@ import { PlayerPreview } from './player-preview';
 
 export const PlayerFeature = () => {
   return (
-    <div className="fixed bottom-0 w-full shadow">
+    <div className="fixed bottom-0 w-full bg-white shadow">
       <Progress value={75} />
       <div className="flex items-center justify-between h-full gap-1">
         <PlayerPreview />

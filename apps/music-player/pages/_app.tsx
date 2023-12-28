@@ -10,7 +10,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Welcome to music-player!</title>
       </Head>
-      <main>
+      <main className="min-h-screen bg-background">
         <Component {...pageProps} />
         <PlayerFeature />
       </main>

@@ -1,5 +1,5 @@
 export function Index() {
-  return <div>ih</div>;
+  return <div></div>;
 }
 
 export default Index;
