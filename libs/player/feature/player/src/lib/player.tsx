@@ -9,7 +9,7 @@ export const PlayerFeature = () => {
   const { load, togglePlayPause, playing } = useGlobalAudioPlayer();
 
   useEffect(() => {
-    load('/victory-in-jesus.mp3', {
+    load('/music/hymns-and-classics/victory-in-jesus.mp3', {
       autoplay: false,
     });
   }, [load]);

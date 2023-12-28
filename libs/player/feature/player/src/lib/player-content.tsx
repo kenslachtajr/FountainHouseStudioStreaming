@@ -1,3 +1,4 @@
+import { HYMNS_AND_CLASSICS } from '@workspace/assets';
 import {
   Button,
   DrawerContent,
@@ -15,7 +16,8 @@ import { useAudioTime } from './player';
 
 export const PlayerContent = () => {
   const time = useAudioTime();
-  const { pause, togglePlayPause, playing, seek } = useGlobalAudioPlayer();
+  const { pause, togglePlayPause, playing, seek, load } =
+    useGlobalAudioPlayer();
 
   return (
     <DrawerContent>
@@ -60,7 +62,15 @@ export const PlayerContent = () => {
             <Button $size="icon" $variant="ghost" onClick={togglePlayPause}>
               <LucideIcon iconName={playing ? 'Pause' : 'Play'} size={30} />
             </Button>
-            <Button $size="icon" $variant="ghost">
+            <Button
+              $size="icon"
+              $variant="ghost"
+              onClick={() =>
+                load(HYMNS_AND_CLASSICS[randomIntFromInterval(0, 19)].url, {
+                  autoplay: true,
+                })
+              }
+            >
               <LucideIcon iconName="SkipForward" size={25} />
             </Button>
             <Button $size="icon" $variant="ghost">
@@ -72,3 +82,7 @@ export const PlayerContent = () => {
     </DrawerContent>
   );
 };
+
+function randomIntFromInterval(min: number, max: number): number {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
