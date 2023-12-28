@@ -9,4 +9,6 @@ export {
   CardContent,
   CardFooter,
 } from './lib/ui/card';
+export { ImageWithFallback } from './lib/ui/image-fallback';
+export { LucideIcon } from './lib/ui/lucide-icon';
 export { Progress } from './lib/ui/progress';
