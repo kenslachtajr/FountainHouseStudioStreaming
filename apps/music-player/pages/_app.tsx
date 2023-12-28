@@ -1,5 +1,6 @@
 import './styles.css';
 
+import { PlayerFeature } from '@workspace/player/feature/player';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
@@ -11,6 +12,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
       </Head>
       <main>
         <Component {...pageProps} />
+        <PlayerFeature />
       </main>
     </>
   );
