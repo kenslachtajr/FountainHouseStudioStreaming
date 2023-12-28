@@ -13,7 +13,7 @@ const nextConfig = {
     svgr: false,
   },
   images: {
-    domains: ['picsum.photos', 'loremflickr.com'],
+    domains: ['picsum.photos', 'loremflickr.com', 'images.squarespace-cdn.com'],
   },
 };
 
