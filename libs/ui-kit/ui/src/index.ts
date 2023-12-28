@@ -9,6 +9,19 @@ export {
   CardContent,
   CardFooter,
 } from './lib/ui/card';
+export {
+  Drawer,
+  DrawerTrigger,
+  DrawerPortal,
+  DrawerClose,
+  DrawerOverlay,
+  DrawerPrimitiveContent,
+  DrawerContent,
+  DrawerHeader,
+  DrawerFooter,
+  DrawerTitle,
+  DrawerDescription,
+} from './lib/ui/drawer';
 export { ImageWithFallback } from './lib/ui/image-fallback';
 export { LucideIcon } from './lib/ui/lucide-icon';
 export { Progress } from './lib/ui/progress';
