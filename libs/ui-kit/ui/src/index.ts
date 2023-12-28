@@ -25,3 +25,4 @@ export {
 export { ImageWithFallback } from './lib/ui/image-fallback';
 export { LucideIcon } from './lib/ui/lucide-icon';
 export { Progress } from './lib/ui/progress';
+export { Slider } from './lib/ui/slider';
