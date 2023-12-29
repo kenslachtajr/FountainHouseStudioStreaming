@@ -16,7 +16,7 @@ import { useAudioTime } from './player';
 
 export const PlayerContent = () => {
   const time = useAudioTime();
-  const { pause, togglePlayPause, playing, seek, load } =
+  const { pause, togglePlayPause, playing, seek, load, duration } =
     useGlobalAudioPlayer();
 
   return (
@@ -41,7 +41,7 @@ export const PlayerContent = () => {
         </DrawerHeader>
         <DrawerFooter className="space-y-5">
           <Slider
-            value={[(time / 150) * 100]}
+            value={[(time / duration) * 100]}
             defaultValue={[25, 75]}
             step={10}
             minStepsBetweenThumbs={1}

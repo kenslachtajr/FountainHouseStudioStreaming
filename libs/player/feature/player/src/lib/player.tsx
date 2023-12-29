@@ -6,7 +6,7 @@ import { PlayerPreview } from './player-preview';
 
 export const PlayerFeature = () => {
   const time = useAudioTime();
-  const { load, togglePlayPause, playing } = useGlobalAudioPlayer();
+  const { load, togglePlayPause, playing, duration } = useGlobalAudioPlayer();
 
   useEffect(() => {
     load('/music/hymns-and-classics/victory-in-jesus.mp3', {
@@ -16,7 +16,7 @@ export const PlayerFeature = () => {
 
   return (
     <div className="fixed bottom-0 w-full bg-white shadow">
-      <Progress value={(time / 150) * 100} />
+      <Progress value={(time / duration) * 100} />
       <div className="flex items-center justify-between h-full gap-1">
         <PlayerPreview />
         <div className="pr-9">
