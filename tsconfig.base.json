@@ -15,7 +15,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@workspace/assets": ["libs/assets/src/index.ts"],
       "@workspace/player/feature/player": [
         "libs/player/feature/player/src/index.ts"
       ],
