@@ -18,6 +18,7 @@
       "@workspace/player/feature/player": [
         "libs/player/feature/player/src/index.ts"
       ],
+      "@workspace/player/util": ["libs/player/util/src/index.ts"],
       "@workspace/ui-kit/ui": ["libs/ui-kit/ui/src/index.ts"],
       "@workspace/ui-kit/util": ["libs/ui-kit/util/src/index.ts"]
     }
