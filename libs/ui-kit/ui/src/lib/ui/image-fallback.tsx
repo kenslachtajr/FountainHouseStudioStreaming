@@ -1,4 +1,3 @@
-import { DEFAULT_IMG } from '@workspace/assets';
 import Image, { ImageProps } from 'next/image';
 import { forwardRef, useEffect, useState } from 'react';
 
@@ -11,7 +10,12 @@ export const ImageWithFallback = forwardRef<
   ImageWithFallbackProps
 >(
   (
-    { fallback = DEFAULT_IMG, alt, src, ...props }: ImageWithFallbackProps,
+    {
+      fallback = '/images/square.jpg',
+      alt,
+      src,
+      ...props
+    }: ImageWithFallbackProps,
     ref
   ) => {
     const [error, setError] = useState<React.SyntheticEvent<
