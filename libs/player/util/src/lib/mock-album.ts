@@ -35,7 +35,7 @@ export const HYMNS_AND_CLASSICS = [
     id: '5-hac-llc-tis-so-sweet',
     artist: 'Literal Life Church',
     title: "'Tis So Sweet",
-    url: '  /tis-so-sweet.mp3',
+    url: '/music/hymns-and-classics/tis-so-sweet.mp3',
     cover:
       'https://images.squarespace-cdn.com/content/v1/5a42cae932601ee830efbab8/1696190992725-HXSIM6E7NL6BE572IDO2/photo_2023-10-01+16.08.39.jpeg?format=2500w',
   },
