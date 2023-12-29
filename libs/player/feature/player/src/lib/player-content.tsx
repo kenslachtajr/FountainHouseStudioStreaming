@@ -1,4 +1,8 @@
-import { HYMNS_AND_CLASSICS, useAudioTime } from '@workspace/player/util';
+import {
+  HYMNS_AND_CLASSICS,
+  randomNumberBetween,
+  useAudioTime,
+} from '@workspace/player/util';
 import {
   Button,
   DrawerContent,
@@ -10,7 +14,10 @@ import {
   LucideIcon,
   Slider,
 } from '@workspace/ui-kit/ui';
+import React from 'react';
 import { useGlobalAudioPlayer } from 'react-use-audio-player';
+
+import { PlayerTimeLabel } from './player-time-label';
 
 export const PlayerContent = () => {
   const time = useAudioTime();
@@ -50,6 +57,7 @@ export const PlayerContent = () => {
               seek(val * 1.5);
             }}
           />
+          <PlayerTimeLabel />
           <div className="flex items-center justify-between">
             <Button $size="icon" $variant="ghost">
               <LucideIcon iconName="Shuffle" size={20} />
@@ -80,7 +88,3 @@ export const PlayerContent = () => {
     </DrawerContent>
   );
 };
-
-function randomNumberBetween(min: number, max: number): number {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
