@@ -1,6 +1,6 @@
-export { Anchor, AnchorProps } from './lib/ui/button/anchor';
+export { Anchor, type AnchorProps } from './lib/ui/button/anchor';
 export { Avatar, AvatarFallback, AvatarImage } from './lib/ui/avatar';
-export { Button, ButtonProps } from './lib/ui/button/button';
+export { Button, type ButtonProps } from './lib/ui/button/button';
 export {
   Card,
   CardHeader,
