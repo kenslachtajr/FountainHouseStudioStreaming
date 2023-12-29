@@ -16,7 +16,7 @@ export const PlayerFeature = () => {
   }, [load]);
 
   return (
-    <div className="fixed bottom-0 w-full bg-white shadow">
+    <div className="w-full bg-white border-b">
       <Progress value={(time / duration) * 100} />
       <div className="flex items-center justify-between h-full gap-1">
         <PlayerPreview />
