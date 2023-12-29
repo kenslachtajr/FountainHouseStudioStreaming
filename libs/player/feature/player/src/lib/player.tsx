@@ -1,5 +1,6 @@
+import { useAudioTime } from '@workspace/player/util';
 import { Button, LucideIcon, Progress } from '@workspace/ui-kit/ui';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect } from 'react';
 import { useGlobalAudioPlayer } from 'react-use-audio-player';
 
 import { PlayerPreview } from './player-preview';
@@ -28,26 +29,3 @@ export const PlayerFeature = () => {
     </div>
   );
 };
-
-export function useAudioTime() {
-  const frameRef = useRef<number>();
-  const [pos, setPos] = useState(0);
-  const { getPosition } = useGlobalAudioPlayer();
-
-  useEffect(() => {
-    const animate = () => {
-      setPos(getPosition());
-      frameRef.current = requestAnimationFrame(animate);
-    };
-
-    frameRef.current = window.requestAnimationFrame(animate);
-
-    return () => {
-      if (frameRef.current) {
-        cancelAnimationFrame(frameRef.current);
-      }
-    };
-  }, [getPosition]);
-
-  return pos;
-}
