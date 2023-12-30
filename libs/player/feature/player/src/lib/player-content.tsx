@@ -1,8 +1,4 @@
-import {
-  HYMNS_AND_CLASSICS,
-  randomNumberBetween,
-  useAudioTime,
-} from '@workspace/player/util';
+import { useAudioTime } from '@workspace/player/util';
 import {
   Button,
   DrawerContent,
@@ -14,15 +10,25 @@ import {
   LucideIcon,
   Slider,
 } from '@workspace/ui-kit/ui';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useGlobalAudioPlayer } from 'react-use-audio-player';
+import { useSnapshot } from 'reactish-state';
 
 import { PlayerTimeLabel } from './player-time-label';
+import { PlayerActions, selectCurrentSong } from './state/player';
 
 export const PlayerContent = () => {
+  const currentSong = useSnapshot(selectCurrentSong);
   const time = useAudioTime();
-  const { pause, togglePlayPause, playing, seek, load, duration } =
+  const { pause, togglePlayPause, playing, seek, duration, load } =
     useGlobalAudioPlayer();
+
+  useEffect(() => {
+    if (!currentSong) return;
+    load(currentSong.url, {
+      autoplay: true,
+    });
+  }, [currentSong, load]);
 
   return (
     <DrawerContent>
@@ -33,28 +39,27 @@ export const PlayerContent = () => {
               priority
               alt="Album Cover"
               className="object-cover w-full h-full rounded"
-              src="https://images.squarespace-cdn.com/content/v1/5a42cae932601ee830efbab8/1696190992725-HXSIM6E7NL6BE572IDO2/photo_2023-10-01+16.08.39.jpeg?format=2500w"
+              src={currentSong?.cover ?? ''}
             />
           </div>
           <div>
-            <DrawerDescription>Hymns And Classics</DrawerDescription>
+            <DrawerDescription>{currentSong?.album}</DrawerDescription>
             <DrawerTitle className="leading-loose">
-              Victory In Jesus
+              {currentSong?.title}
             </DrawerTitle>
-            <DrawerDescription>Literal Life Church</DrawerDescription>
+            <DrawerDescription>{currentSong?.artist}</DrawerDescription>
           </div>
         </DrawerHeader>
         <DrawerFooter className="space-y-5">
           <Slider
             value={[(time / duration) * 100]}
-            defaultValue={[25, 75]}
-            step={10}
+            step={1}
             minStepsBetweenThumbs={1}
             max={100}
             onValueCommit={togglePlayPause}
             onValueChange={([val]) => {
               pause();
-              seek(val * 1.5);
+              seek(val * (duration / 100));
             }}
           />
           <PlayerTimeLabel />
@@ -62,7 +67,11 @@ export const PlayerContent = () => {
             <Button $size="icon" $variant="ghost">
               <LucideIcon iconName="Shuffle" size={20} />
             </Button>
-            <Button $size="icon" $variant="ghost">
+            <Button
+              $size="icon"
+              $variant="ghost"
+              onClick={PlayerActions.prevSong}
+            >
               <LucideIcon iconName="SkipBack" size={25} />
             </Button>
             <Button $size="icon" $variant="ghost" onClick={togglePlayPause}>
@@ -71,11 +80,7 @@ export const PlayerContent = () => {
             <Button
               $size="icon"
               $variant="ghost"
-              onClick={() =>
-                load(HYMNS_AND_CLASSICS[randomNumberBetween(0, 19)].url, {
-                  autoplay: true,
-                })
-              }
+              onClick={PlayerActions.nextSong}
             >
               <LucideIcon iconName="SkipForward" size={25} />
             </Button>
