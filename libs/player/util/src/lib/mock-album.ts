@@ -1,6 +1,7 @@
 export const HYMNS_AND_CLASSICS = [
   {
     id: '1-hac-llc-victory-in-jesus',
+    album: 'Hymns & Classics Sing Along Vol. 1',
     artist: 'Literal Life Church',
     title: 'Victory In Jesus',
     url: '/music/hymns-and-classics/victory-in-jesus.mp3',
@@ -9,6 +10,7 @@ export const HYMNS_AND_CLASSICS = [
   },
   {
     id: '2-hac-llc-what-a-friend-we-have-in-jesus',
+    album: 'Hymns & Classics Sing Along Vol. 1',
     artist: 'Literal Life Church',
     title: 'What A Friend We Have In Jesus',
     url: '/music/hymns-and-classics/what-a-friend-we-have-in-jesus.mp3',
@@ -17,6 +19,7 @@ export const HYMNS_AND_CLASSICS = [
   },
   {
     id: '3-hac-llc-how-great-thou-art',
+    album: 'Hymns & Classics Sing Along Vol. 1',
     artist: 'Literal Life Church',
     title: 'How Great Thou Art',
     url: '/music/hymns-and-classics/how-great-thou-art.mp3',
@@ -25,6 +28,7 @@ export const HYMNS_AND_CLASSICS = [
   },
   {
     id: '4-hac-llc-blessed-assurance',
+    album: 'Hymns & Classics Sing Along Vol. 1',
     artist: 'Literal Life Church',
     title: 'Blessed Assurance',
     url: '/music/hymns-and-classics/blessed-assurance.mp3',
@@ -33,6 +37,7 @@ export const HYMNS_AND_CLASSICS = [
   },
   {
     id: '5-hac-llc-tis-so-sweet',
+    album: 'Hymns & Classics Sing Along Vol. 1',
     artist: 'Literal Life Church',
     title: "'Tis So Sweet",
     url: '/music/hymns-and-classics/tis-so-sweet.mp3',
@@ -41,6 +46,7 @@ export const HYMNS_AND_CLASSICS = [
   },
   {
     id: '6-hac-llc-lord-i-need-thee',
+    album: 'Hymns & Classics Sing Along Vol. 1',
     artist: 'Literal Life Church',
     title: 'Lord I Need Thee',
     url: '/music/hymns-and-classics/lord-i-need-thee.mp3',
@@ -49,6 +55,7 @@ export const HYMNS_AND_CLASSICS = [
   },
   {
     id: '7-hac-llc-old-rugged-cross',
+    album: 'Hymns & Classics Sing Along Vol. 1',
     artist: 'Literal Life Church',
     title: 'Old Rugged Cross',
     url: '/music/hymns-and-classics/old-rugged-cross.mp3',
@@ -57,6 +64,7 @@ export const HYMNS_AND_CLASSICS = [
   },
   {
     id: '8-hac-llc-the-blood-will-never-loose-its-power',
+    album: 'Hymns & Classics Sing Along Vol. 1',
     artist: 'Literal Life Church',
     title: 'The Blood Will Never Lose Its Power',
     url: '/music/hymns-and-classics/the-blood-will-never-lose-its-power.mp3',
@@ -65,6 +73,7 @@ export const HYMNS_AND_CLASSICS = [
   },
   {
     id: '9-hac-llc-power-in-the-blood',
+    album: 'Hymns & Classics Sing Along Vol. 1',
     artist: 'Literal Life Church',
     title: 'Power In The Blood',
     url: '/music/hymns-and-classics/power-in-the-blood.mp3',
@@ -73,6 +82,7 @@ export const HYMNS_AND_CLASSICS = [
   },
   {
     id: '10-hac-llc-great-is-thy-faithfulness',
+    album: 'Hymns & Classics Sing Along Vol. 1',
     artist: 'Literal Life Church',
     title: 'Great Is Thy Faithfulness',
     url: '/music/hymns-and-classics/great-is-thy-faithfulness.mp3',
@@ -81,6 +91,7 @@ export const HYMNS_AND_CLASSICS = [
   },
   {
     id: '11-hac-llc-when-we-all-get-to-heaven',
+    album: 'Hymns & Classics Sing Along Vol. 1',
     artist: 'Literal Life Church',
     title: 'When We All Get To Heaven',
     url: '/music/hymns-and-classics/when-we-all-get-to-heaven.mp3',
@@ -89,6 +100,7 @@ export const HYMNS_AND_CLASSICS = [
   },
   {
     id: '12-hac-llc-just-a-closer-walk',
+    album: 'Hymns & Classics Sing Along Vol. 1',
     artist: 'Literal Life Church',
     title: 'Just A Closer Walk',
     url: '/music/hymns-and-classics/just-a-closer-walk.mp3',
@@ -97,6 +109,7 @@ export const HYMNS_AND_CLASSICS = [
   },
   {
     id: '13-hac-llc-the-love-of-god',
+    album: 'Hymns & Classics Sing Along Vol. 1',
     artist: 'Literal Life Church',
     title: 'The Love Of God',
     url: '/music/hymns-and-classics/the-love-of-god.mp3',
@@ -105,6 +118,7 @@ export const HYMNS_AND_CLASSICS = [
   },
   {
     id: '14-hac-llc-well-talk-it-over',
+    album: 'Hymns & Classics Sing Along Vol. 1',
     artist: 'Literal Life Church',
     title: "We'll Talk It Over",
     url: '/music/hymns-and-classics/well-talk-it-over.mp3',
@@ -113,6 +127,7 @@ export const HYMNS_AND_CLASSICS = [
   },
   {
     id: '15-hac-llc-glory-land',
+    album: 'Hymns & Classics Sing Along Vol. 1',
     artist: 'Literal Life Church',
     title: 'Glory Land',
     url: '/music/hymns-and-classics/glory-land.mp3',
@@ -121,6 +136,7 @@ export const HYMNS_AND_CLASSICS = [
   },
   {
     id: '16-hac-llc-in-the-garden',
+    album: 'Hymns & Classics Sing Along Vol. 1',
     artist: 'Literal Life Church',
     title: 'In The Garden',
     url: '/music/hymns-and-classics/in-the-garden.mp3',
@@ -129,6 +145,7 @@ export const HYMNS_AND_CLASSICS = [
   },
   {
     id: '17-hac-llc-it-is-well',
+    album: 'Hymns & Classics Sing Along Vol. 1',
     artist: 'Literal Life Church',
     title: 'It Is Well',
     url: '/music/hymns-and-classics/it-is-well.mp3',
@@ -137,6 +154,7 @@ export const HYMNS_AND_CLASSICS = [
   },
   {
     id: '18-hac-llc-i-stand-amazed',
+    album: 'Hymns & Classics Sing Along Vol. 1',
     artist: 'Literal Life Church',
     title: 'I Stand Amazed',
     url: '/music/hymns-and-classics/i-stand-amazed.mp3',
@@ -145,6 +163,7 @@ export const HYMNS_AND_CLASSICS = [
   },
   {
     id: '19-hac-llc-ill-fly-away',
+    album: 'Hymns & Classics Sing Along Vol. 1',
     artist: 'Literal Life Church',
     title: "I'll Fly Away",
     url: '/music/hymns-and-classics/ill-fly-away.mp3',
