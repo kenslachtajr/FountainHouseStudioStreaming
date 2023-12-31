@@ -19,6 +19,9 @@
       "@workspace/player/feature/player": [
         "libs/player/feature/player/src/index.ts"
       ],
+      "@workspace/player/feature/player-content": [
+        "libs/player/feature/player-content/src/index.ts"
+      ],
       "@workspace/player/feature/player-preview": [
         "libs/player/feature/player-preview/src/index.ts"
       ],
