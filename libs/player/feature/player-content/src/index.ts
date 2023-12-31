@@ -1,1 +1,1 @@
-export * from './lib/player-content';
+export { PlayerContentFeature } from './lib/player-content';

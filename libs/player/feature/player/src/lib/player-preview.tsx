@@ -2,8 +2,6 @@ import { PlayerSelectors } from '@workspace/player/data-access';
 import { Drawer, DrawerTrigger, ImageWithFallback } from '@workspace/ui-kit/ui';
 import { useSnapshot } from 'reactish-state';
 
-import { PlayerContent } from './player-content';
-
 export const PlayerPreview = () => {
   const currentSong = useSnapshot(PlayerSelectors.selectCurrentSong);
   return (
@@ -21,7 +19,6 @@ export const PlayerPreview = () => {
           <p className="text-sm text-muted-foreground">{currentSong!.artist}</p>
         </div>
       </DrawerTrigger>
-      <PlayerContent />
     </Drawer>
   );
 };

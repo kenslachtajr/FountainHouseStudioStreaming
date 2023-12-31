@@ -1,5 +1,5 @@
 import { PlayerActions, PlayerSelectors } from '@workspace/player/data-access';
-import { PlayerContent } from '@workspace/player/feature/player';
+import { PlayerContentFeature } from '@workspace/player/feature/player-content';
 import { useAudioTime } from '@workspace/player/util';
 import {
   Button,
@@ -17,7 +17,7 @@ import { useSnapshot } from 'reactish-state';
 /* eslint-disable-next-line */
 export interface PlayerShellFeatureProps {}
 
-export const PlayerShellFeature = (props: PlayerShellFeatureProps) => {
+export const PlayerShellFeature: React.FC<PlayerShellFeatureProps> = () => {
   const { load } = useGlobalAudioPlayer();
   const currentSong = useSnapshot(PlayerSelectors.selectCurrentSong);
 
@@ -31,7 +31,7 @@ export const PlayerShellFeature = (props: PlayerShellFeatureProps) => {
 
   return (
     <PlayerPreview>
-      <PlayerContent />
+      <PlayerContentFeature />
     </PlayerPreview>
   );
 };
