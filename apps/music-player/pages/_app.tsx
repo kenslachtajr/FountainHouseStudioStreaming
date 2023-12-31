@@ -1,6 +1,6 @@
 import './styles.css';
 
-import { PlayerFeature } from '@workspace/player/feature/player';
+import { PlayerShellFeature } from '@workspace/player/feature/player-shell';
 import { BottomNav } from '@workspace/ui-kit/ui';
 import { icons } from 'lucide-react';
 import { AppProps } from 'next/app';
@@ -34,7 +34,8 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <main className="min-h-screen bg-background">
         <Component {...pageProps} />
         <div className="fixed bottom-0 w-full">
-          <PlayerFeature />
+          <PlayerShellFeature />
+          {/* <PlayerFeature /> */}
           <BottomNav navItems={NAV_ITEMS} />
         </div>
       </main>
