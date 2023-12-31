@@ -6,6 +6,8 @@ import { icons } from 'lucide-react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
+import { HeadTags } from './head-tags';
+
 const NAV_ITEMS = [
   {
     href: '#',
@@ -30,6 +32,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Welcome to music-player!</title>
+        <HeadTags />
       </Head>
       <main className="min-h-screen bg-background">
         <Component {...pageProps} />
