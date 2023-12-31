@@ -1,1 +1,1 @@
-export * from './lib/player-shell';
+export { PlayerShellFeature } from './lib/player-shell';

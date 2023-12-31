@@ -1,14 +1,10 @@
-import styles from './player-shell.module.scss';
-
 /* eslint-disable-next-line */
-export interface PlayerShellProps {}
+export interface PlayerShellFeatureProps {}
 
-export function PlayerShell(props: PlayerShellProps) {
+export const PlayerShellFeature = (props: PlayerShellFeatureProps) => {
   return (
-    <div className={styles['container']}>
+    <div>
       <h1>Welcome to PlayerShell!</h1>
     </div>
   );
-}
-
-export default PlayerShell;
+};
