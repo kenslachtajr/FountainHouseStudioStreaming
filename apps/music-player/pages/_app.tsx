@@ -35,7 +35,6 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         <div className="fixed bottom-0 w-full">
           <PlayerShellFeature />
-          {/* <PlayerFeature /> */}
           <BottomNav navItems={NAV_ITEMS} />
         </div>
       </main>
