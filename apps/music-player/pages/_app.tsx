@@ -6,7 +6,7 @@ import { icons } from 'lucide-react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import { HeadTags } from './head-tags';
+import { HeadTags } from '../components/head-tags';
 
 const NAV_ITEMS = [
   {
