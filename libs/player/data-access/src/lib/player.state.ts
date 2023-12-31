@@ -1,5 +1,5 @@
 import { HYMNS_AND_CLASSICS } from '@workspace/player/util';
-import { selector, state } from 'reactish-state';
+import { state } from 'reactish-state';
 
 type Song = (typeof HYMNS_AND_CLASSICS)[number];
 
@@ -13,7 +13,7 @@ const initialState: PlayerState = {
   queue: HYMNS_AND_CLASSICS,
 };
 
-const playerState = state(initialState, (set, get) => ({
+export const PlayerState = state(initialState, (set, get) => ({
   nextSong: () => {
     const { currentSong, queue } = get();
     const prevIdx = queue.findIndex((song) => song.id === currentSong?.id) ?? 0;
@@ -34,8 +34,4 @@ const playerState = state(initialState, (set, get) => ({
   },
 }));
 
-export const PlayerActions = playerState.actions;
-
-// SELECTORS
-
-export const selectCurrentSong = selector(playerState, (s) => s.currentSong);
+export const { actions: PlayerActions } = PlayerState;

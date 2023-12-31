@@ -1,11 +1,11 @@
+import { PlayerSelectors } from '@workspace/player/data-access';
 import { Drawer, DrawerTrigger, ImageWithFallback } from '@workspace/ui-kit/ui';
 import { useSnapshot } from 'reactish-state';
 
 import { PlayerContent } from './player-content';
-import { selectCurrentSong } from './state/player';
 
 export const PlayerPreview = () => {
-  const currentSong = useSnapshot(selectCurrentSong);
+  const currentSong = useSnapshot(PlayerSelectors.selectCurrentSong);
   return (
     <Drawer>
       <DrawerTrigger className="flex items-center justify-start flex-grow gap-3">

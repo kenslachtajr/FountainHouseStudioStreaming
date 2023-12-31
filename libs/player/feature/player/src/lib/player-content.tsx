@@ -1,3 +1,4 @@
+import { PlayerActions, PlayerSelectors } from '@workspace/player/data-access';
 import { useAudioTime } from '@workspace/player/util';
 import {
   Button,
@@ -15,10 +16,9 @@ import { useGlobalAudioPlayer } from 'react-use-audio-player';
 import { useSnapshot } from 'reactish-state';
 
 import { PlayerTimeLabel } from './player-time-label';
-import { PlayerActions, selectCurrentSong } from './state/player';
 
 export const PlayerContent = () => {
-  const currentSong = useSnapshot(selectCurrentSong);
+  const currentSong = useSnapshot(PlayerSelectors.selectCurrentSong);
   const time = useAudioTime();
   const { pause, togglePlayPause, playing, seek, duration, load } =
     useGlobalAudioPlayer();
