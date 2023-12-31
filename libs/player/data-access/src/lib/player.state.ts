@@ -14,10 +14,46 @@ const initialState: PlayerState = {
 };
 
 export const PlayerState = state(initialState, (set, get) => ({
+  playSong: (song: Song) => {
+    const { currentSong, queue } = get();
+    const songIndex = queue.findIndex((s) => s.id === song.id);
+
+    if (songIndex !== -1) {
+      const updatedQueue = [...queue];
+      const movedSong = updatedQueue.splice(songIndex, 1)[0];
+      updatedQueue.splice(
+        queue.findIndex((s) => s.id === currentSong?.id) + 1,
+        0,
+        movedSong
+      );
+
+      set((state) => ({
+        ...state,
+        currentSong: song,
+        queue: updatedQueue,
+      }));
+    } else {
+      const prevIdx = queue.findIndex((s) => s.id === currentSong?.id) ?? 0;
+      set({
+        currentSong: song,
+        queue: [
+          ...queue.slice(0, prevIdx + 1),
+          song,
+          ...queue.slice(prevIdx + 1),
+        ],
+      });
+    }
+  },
   nextSong: () => {
     const { currentSong, queue } = get();
-    const prevIdx = queue.findIndex((song) => song.id === currentSong?.id) ?? 0;
-    const nextSong = queue.at(prevIdx + 1 ?? 0);
+
+    if (!currentSong || queue.indexOf(currentSong) === queue.length - 1) {
+      return;
+    }
+
+    const currentIndex = queue.findIndex((s) => s.id === currentSong?.id) ?? 0;
+    const nextIndex = (currentIndex + 1) % queue.length;
+    const nextSong = queue[nextIndex];
     set((state) => ({
       ...state,
       currentSong: nextSong,
@@ -25,8 +61,9 @@ export const PlayerState = state(initialState, (set, get) => ({
   },
   prevSong: () => {
     const { currentSong, queue } = get();
-    const prevIdx = queue.findIndex((song) => song.id === currentSong?.id) ?? 0;
-    const prevSong = queue.at(prevIdx - 1 ?? 0);
+    const currentIndex = queue.findIndex((s) => s.id === currentSong?.id) ?? 0;
+    const prevIndex = (currentIndex - 1 + queue.length) % queue.length;
+    const prevSong = queue[prevIndex];
     set((state) => ({
       ...state,
       currentSong: prevSong,
