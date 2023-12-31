@@ -16,9 +16,6 @@
     "baseUrl": ".",
     "paths": {
       "@workspace/player/data-access": ["libs/player/data-access/src/index.ts"],
-      "@workspace/player/feature/player": [
-        "libs/player/feature/player/src/index.ts"
-      ],
       "@workspace/player/feature/player-content": [
         "libs/player/feature/player-content/src/index.ts"
       ],
