@@ -1,14 +1,12 @@
-import styles from './player-preview.module.scss';
+import React from 'react';
 
 /* eslint-disable-next-line */
 export interface PlayerPreviewProps {}
 
-export function PlayerPreview(props: PlayerPreviewProps) {
+export const PlayerPreviewFeature: React.FC<PlayerPreviewProps> = (props) => {
   return (
-    <div className={styles['container']}>
+    <div>
       <h1>Welcome to PlayerPreview!</h1>
     </div>
   );
-}
-
-export default PlayerPreview;
+};

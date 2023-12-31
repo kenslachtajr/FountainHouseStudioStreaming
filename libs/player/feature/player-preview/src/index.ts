@@ -1,1 +1,1 @@
-export * from './lib/player-preview';
+export { PlayerPreviewFeature } from './lib/player-preview';
