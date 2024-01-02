@@ -17,6 +17,7 @@ export const PlayerShellFeature: React.FC<PlayerShellFeatureProps> = () => {
     load(currentSong.url, {
       autoplay: true,
       onend: PlayerActions.nextSong,
+      html5: true,
     });
   }, [currentSong, load]);
 
