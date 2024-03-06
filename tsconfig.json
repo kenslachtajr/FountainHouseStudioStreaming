@@ -3,6 +3,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+
+        "@/*": ["*"],
+
       "@workspace/ui-kit/*": [
         "libs/ui-kit/ui/src/*"
       ],
